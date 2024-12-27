@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    position: relative;
+  }
+  
+  .array-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #f0f0f0;
+  }
+  .array-bar {
+    display: flex;
+    width: 50px;
+    margin: 0 2px;
+    background: linear-gradient(to right, rgb(93, 105, 138), rgb(73, 94, 134));
+    display: inline-block;
+    position: relative;
+    border-radius: 5px; /* Slightly round the edges for a smoother look */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.2); /* Shadow for depth */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  .bar-label {
+    position: absolute;
+    top: -20px; /* Move label 20px above the bar */
+    left: 50%;
+    transform: translateX(-50%); /* Center label horizontally */
+    font-size: 14px;
+    color: #000;
+  }
+  
+  .array-bar.comparing {
+    background: linear-gradient(to top, rgb(88, 103, 158), rgb(55, 67, 135)); /* Gradient for comparing bars */
+    transform: scale(1.05); /* Slightly enlarge the bar for emphasis */
+  }
+  
+  .array-bar:hover {
+    transform: translateY(-3px); /* Hover effect to "lift" the bar slightly */
+  }
+  .code-display {
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, rgb(76, 87, 116), rgb(59, 82, 126));
+    border-radius: 8px;
+    color: rgb(198, 201, 255);
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    z-index: 1000;
+   
+  }
+  
+  .code-display pre {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+  }
+  

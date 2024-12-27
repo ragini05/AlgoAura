@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the logo */
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to left, #6240de, #33397d); /* Gradient with sky blue tones */
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff; /* White text for contrast */
+}

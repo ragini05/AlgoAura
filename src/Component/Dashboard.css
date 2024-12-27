@@ -1,0 +1,106 @@
+/* Dashboard.css */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, rgb(203, 214, 227), rgb(176, 204, 220)); /* Soft neutral gradient */
+  background-image: 
+    linear-gradient(to right, #ddd 1px, transparent 1px),  /* Vertical lines */
+    linear-gradient(to bottom, #ddd 1px, transparent 1px); /* Horizontal lines */
+  background-size: 40px 40px; /* Grid size */
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, rgb(76, 87, 116), rgb(34, 48, 74)); /* Dark, professional tones */
+  color: #fff;
+  padding: 10px 20px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.algorithm-buttons button,
+.action-buttons button,
+.logout-button {
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #171718;
+  background: linear-gradient(to right, #8b8f9b, #bac0e1); /* Gradient from purple to deep blue */
+  border: none;
+  border-radius: 4px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.algorithm-buttons button:hover,
+.action-buttons button:hover,
+.logout-button:hover {
+  background-color: #393b68; /* Darker purple */
+  color: #10244b;
+  font-family: 'Times New Roman', Times, serif;
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.algorithm-buttons,
+.action-buttons,
+.sorting-and-generate {
+  display: flex;
+  align-items: center;
+}
+
+.user-input {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-input input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #8b8daf; /* Purple-blue border */
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #9da2bb; /* Neutral background */
+  color: #bca7a7;
+}
+
+.user-input input:focus {
+  border-color: #606075; /* Darker purple */
+  background-color: #a6a8c3; /* Slightly darker gray */
+  color: #000;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.user-input input::placeholder {
+  color: #212020; /* Subtle placeholder color */
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.array-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 20px;
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+
