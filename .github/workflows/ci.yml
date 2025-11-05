@@ -1,30 +1,31 @@
-name: CI - Build and Test
+name: React App CI
 
 on:
   push:
-    branches: [main] # jab bhi main branch me push hoga
+    branches:
+      - main # jab bhi main branch me push hoga
   pull_request:
-    branches: [main] # PR par bhi chalega
+    branches:
+      - main # jab koi PR aayega
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 18 # React ke liye stable version
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run build
+      - name: Build the project
         run: npm run build
 
-      # Agar test likhe ho to
-      - name: Run tests
-        run: npm test
+      - name: Run tests (optional)
+        run: npm test --if-present
