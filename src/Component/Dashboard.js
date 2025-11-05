@@ -60,14 +60,13 @@ const Dashboard = () => {
         </div>
 
         <div className="action-buttons">
+        <button onClick={handleStopSorting}>Stop</button>
           <button onClick={handleGenerateArray}>Generate Random Array</button>
           <button onClick={handleUserInput}>Use User Input Array</button>
-          <button onClick={handleStopSorting}>Stop</button>
         </div>
 
         <div className="user-input" >
-          <input
-            type="text"
+          <input type="text"
             placeholder="Enter array (comma-separated)"
             onChange={(e) => setUserInput(e.target.value)}
           />

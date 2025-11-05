@@ -1,15 +1,21 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "";
 
 const Login = () => {
-  const [loginResponse, setLoginResponse, setIsLoggedIn ] = useState(null);
-  const [credentials, setCredentials] = useState({ username: '', password: '' });
+  const [loginResponse, setLoginResponse, setIsLoggedIn] = useState(null);
+  const [credentials, setCredentials] = useState({
+    username: "",
+    password: "",
+  });
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setCredentials((prevCredentials) => ({ ...prevCredentials, [name]: value }));
+    setCredentials((prevCredentials) => ({
+      ...prevCredentials,
+      [name]: value,
+    }));
   };
 
   const handleLogin = async () => {
@@ -17,17 +23,25 @@ const Login = () => {
       const { username, password } = credentials;
 
       // Make a POST request to your server endpoint
-      const response = await axios.post('http://localhost:3000/api/login', { username, password });
+      const response = await axios.post("http://localhost:3000/api/login", {
+        username,
+        password,
+      });
 
-      console.log('Login successful');
-      setLoginResponse('Login successful');
+      console.log("Login successful");
+      setLoginResponse("Login successful");
 
       // Redirect to the dashboard
-      navigate('/dashboard');
+      navigate("/dashboard");
       setIsLoggedIn(true);
     } catch (error) {
-      console.error('Login failed:', error.response?.data?.error || 'Unknown error');
-      setLoginResponse(`Login failed: ${error.response?.data?.error || 'Unknown error'}`);
+      console.error(
+        "Login failed:",
+        error.response?.data?.error || "Unknown error"
+      );
+      setLoginResponse(
+        `Login failed: ${error.response?.data?.error || "Unknown error"}`
+      );
     }
   };
 
@@ -62,7 +76,8 @@ const Login = () => {
                 <button
                   type="button"
                   className="btn btn-primary"
-                  onClick={handleLogin}>
+                  onClick={handleLogin}
+                >
                   Login
                 </button>
               </form>
